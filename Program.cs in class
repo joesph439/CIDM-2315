@@ -1,0 +1,14 @@
+namespace Week1;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+       int a = 10;
+       //a += 15;
+       int b = --a;
+       //double c = 2.4;
+       Console.WriteLine($"a = {a}");
+       Console.WriteLine($"b = {b}");
+    }
+}
