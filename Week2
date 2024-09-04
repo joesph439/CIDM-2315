@@ -1,0 +1,117 @@
+namespace Week2;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+/*
+        //get string input from keyboard
+        Console.WriteLine("please input your name");
+        string user_name = Console.ReadLine();
+        Console.WriteLine("Please input your age");
+        string user_Age = Console.ReadLine();
+
+        //convert user_Age from sting to int
+        int age_int = Convert.ToInt16(user_Age);
+        int birth_year = 2024 - age_int;
+        Console.WriteLine($"{user_name} was born in {birth_year}");
+*/
+/*
+
+        double double_num = 90.2123124155661234567;
+        float float_num = (float) double_num;
+        int int_num = (int) double_num;
+        char char_num = (char) double_num;
+        
+        Console.WriteLine($"double_num: {double_num}");
+        Console.WriteLine($"float_num: {float_num}");
+        Console.WriteLine($"int_num: {int_num}");
+        Console.WriteLine($"char_num: {char_num}");
+*/
+/*
+    int num1 = 10;
+    int num2 = 20;
+    Console.WriteLine(num1>num2); //10>20 is wrong false
+    Console.WriteLine(num1<num2); //10<20 is correct, true
+    Console.WriteLine($"num1!=num2: {num1 != num2}"); //10 != 20 is correct, true
+/*
+ /*   int a = 5;
+    int b = 10;
+    Console.WriteLine($"a= {a}, b= {b}");
+    Console.WriteLine($"a>b: {a>b}");
+    Console.WriteLine($"a<b: {a<b}");
+    Console.WriteLine($"a==b: {a==b}");
+    Console.WriteLine($"a!=b: {a!=b}");
+    Console.WriteLine($"true:{true}");
+    Console.WriteLine($"false:{false}");
+*/
+/*
+    int x = 3, y=10;
+    if(x<y) //3<10; false
+    {
+        Console.WriteLine($"x= {x}, y= {y}");
+        Console.WriteLine($"x<y: {x<y}");
+    }
+    Console.WriteLine("Code below if statement");
+*/
+
+/*
+Console.WriteLine("Please input a value");
+string x = Console.ReadLine();
+int x_int = Convert.ToInt16(x);
+
+// check negative or positive
+if(x_int>=0){
+    Console.WriteLine("X is postive");
+}
+else{
+    Console.WriteLine("X is negative");
+}
+
+//check even or odd
+if(x_int%2==0){
+    Console.WriteLine("X is even");
+}
+else{
+    Console.WriteLine("x is odd");
+}
+*/
+/*
+//if else-if statement
+Console.WriteLine("Please input a point grade:");
+String point = Console.ReadLine();
+int point_int = Convert.ToInt16(point);
+if(point_int>=90){
+    Console.WriteLine("Letter Grade:A");
+}
+else if(point_int>=80){
+    Console.WriteLine("Letter Grade: B");
+}
+else if(point_int>=70){
+    Console.WriteLine("Letter Grade: C");
+}
+else if(point_int>=60){
+    Console.WriteLine("Letter Grade D");
+}
+else{
+    Console.WriteLine("Letter Grade: F");
+}
+*/
+
+Console.WriteLine("Please input a value:");
+string x = Console.ReadLine();
+int x_int = Convert.ToInt16(x);
+
+// check negative or postive
+if(x_int>0){
+    Console.WriteLine("x is postive");
+}
+else if(x_int>=0){
+    Console.WriteLine("X equal to 0");
+}
+else{
+    Console.WriteLine("X is negative");
+}
+}
+}
+    
