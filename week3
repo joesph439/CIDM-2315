@@ -1,0 +1,192 @@
+namespace Week3;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+    
+        int n1 = 10, n2 =20, n3 =30;
+        if(n1>n2)
+        {
+            if(n1>n3){
+                Console.WriteLine("The largest num: n1");
+            }
+            else{
+                Console.WriteLine("The largest num: n3");
+            }
+        }
+        else
+        {
+            if(n2>n3){
+                Console.WriteLine("The largest num: n2");
+            }
+            else{
+                Console.WriteLine("The largest num: n3");
+            }
+        }    
+    
+        int age = 20;
+        bool driver_license = true;
+        if( (age>=18)&&(driver_license==true) ){
+        Console.WriteLine("You can drive");
+        }
+
+        string degree ="MS";
+        if(degree =="MS" || degree =="BS"){
+            Console.WriteLine("You can apply for Ph.D.");
+        }
+    
+        
+        string username ="alice";
+        string password = "alice123";
+
+        Console.WriteLine("Please input username:");
+        string user_name = Console.ReadLine();
+        Console.WriteLine("Please input password");
+        string pass_word = Console.ReadLine();
+
+        if(user_name == username && pass_word == password){
+            Console.WriteLine("Log in successfuly");
+        }
+        else{
+            Console.WriteLine("Please check your username and password");
+        }
+  
+    
+        int i = 0;
+        while(i<3){
+            Console.WriteLine(i);
+            i++;
+    
+        Console.WriteLine("Assign an int value to N");
+        int N = Convert.ToInt16(Console.ReadLine());
+        while(N>0){
+            Console.Write("*");
+            N--;
+        }
+    
+        int i = 30;
+        while(i>0){
+            Console.WriteLine(i);
+            i-=5;
+        }
+        //Exercise 2
+        int odd = 1;
+        while(odd <= 10){
+                Console.Write(odd);
+            odd = odd+2;
+        }
+
+        int even = 1;
+        while(even <= 10){
+            if (even%2 !=0){
+            Console.WriteLine(even);
+            }
+            even++;
+        }
+
+    for(int i=0; i<10;i=i+3){
+        Console.WriteLine(i);
+    }
+    for(int x=0; x<10;x++){
+        Console.WriteLine(x);
+    }
+    for(int k = 10; k > 0; k = k-3){
+        Console.WriteLine(k);
+    }
+        Console.WriteLine("Assign an int value to N:");
+        int n1 = Convert.ToInt16(Console.ReadLine());
+        for (int n2 = 0; n2<n1; n2++){
+            Console.Write("*");
+            }
+        int count = 0;
+        do{
+            Console.WriteLine(count);
+            count++;
+        }
+        while(count<5);
+
+        int attemps = 3;
+        string username ="alice";
+        string input_username;
+        do{
+            Console.WriteLine("Please input username");
+            input_username = Console.ReadLine();
+            if(input_username == username){
+                Console.WriteLine("Login Successfully");
+                break;
+            }
+            else{
+                Console.WriteLine("Wrong username");
+            }
+            attemps--;
+            Console.WriteLine($"You have {attemps} chances left");
+        }
+        while(attemps>0); 
+        int x1 = 0;
+        while(x1 < 10)
+        {
+            if(x1 == 3)
+            {
+                Console.WriteLine("Break the loop");
+                break;
+            }
+            Console.WriteLine(x1);
+            x1++;
+        }
+        int y1 = 0;
+        while(y1 <10)
+        {
+            if(y1 == 3)
+            {
+                y1 += 1;
+                Console.WriteLine("Skip current round");
+                continue;
+            }
+            Console.WriteLine(y1);
+            y1++;
+        }
+        for(int row = 0; row<5; row++){
+            for(int col =0; col < 5; col++){
+             if(row>=col)
+                Console.Write('*');
+            }
+            Console.WriteLine("");
+        }
+    
+        for(int row1 = 0; row1 < 4; row1++){
+            for(int col1 = 0; col1 < 4; col1++ ){
+                if(row1<=col1)
+                Console.Write('*');
+            }
+            Console.WriteLine("");
+        }
+
+        for(int row2 = 0; row2 < 5; row2++){
+            for(int col2 = 0; col2 < 5; col2++){
+                Console.Write(col2);
+            }
+            Console.WriteLine("");
+        }
+        for(int row3 = 0; row3 < 5; row3++){
+            for(int col3 = 0; col3 < 5; col3++){
+                Console.Write('*');
+            }
+            Console.WriteLine("");
+        }
+        int num1, num2, max_num;
+        num1 = 10;
+        num2 = 20;
+
+        if(num1 > num2){
+            max_num = num1;
+        }
+        else{
+            max_num = num2;
+        }
+        Console.WriteLine($"The max value is: {max_num}") ;
+
+        max_num = (num1 > num2) ? num1 : num2;
+        Console.WriteLine($"The max value is: {max_num}");  
+    }
+}
