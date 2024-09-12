@@ -1,0 +1,58 @@
+namespace Homework3;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+            //Code for Q1
+            Console.WriteLine("Input an integer:");
+            int N = Convert.ToInt16(Console.ReadLine());
+            for(int n1 = 1; n1<N; n1++){
+                if(N%2!=0){
+                    Console.WriteLine("N is prime");
+                    break;
+                    }
+                else{
+                    Console.WriteLine("N is non-prime");
+                    break;
+                    }
+                n1++;
+                }
+    
+        //Code for Q2
+        Console.WriteLine("Assign an int value to N:");
+        int N = Convert.ToInt16(Console.ReadLine());
+        for( int row = 0; row < N; row++){
+            for(int col = 0; col < N; col++){
+                Console.Write('#');
+            }
+            Console.WriteLine("");
+        }
+    
+
+        //Code for Q3
+        Console.WriteLine("Assign an int value to N:");
+        int N = Convert.ToInt16(Console.ReadLine());
+        for(int row = 0; row<N; row++){
+        for(int col = 0; col<N; col++)
+            {
+                if(row>=col)
+                Console.Write('*');
+            }
+        Console.WriteLine("");
+        }
+
+
+        //Code for Bonus Q
+        Console.WriteLine("Assign an int value to N:");
+        int N = Convert.ToInt16(Console.ReadLine());
+        for(int row = 1; row<=N; row++){
+        for(int col = 1; col<=N; col++){
+            if(row>=col)
+            Console.Write(row);
+            }
+            Console.WriteLine("");
+        }
+    }
+}
