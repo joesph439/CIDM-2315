@@ -1,0 +1,102 @@
+namespace Week4;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int num;
+        int total =0;
+        for(int i = 1; i<4; i++){
+            Console.WriteLine($"Please input an integer:{i}");
+            num = Convert.ToInt16(Console.ReadLine());
+            total = total + num;
+        }
+        Console.WriteLine($"The total is:{total}");
+
+        string user_name = "alice";
+        string pass_word = "alice123";
+       string input_name;
+       string input_pass;
+
+        int max = 3;
+       for( int attempts =1; attempts <= max; attempts++){
+        Console.WriteLine("Enter username:");
+        input_name = Console.ReadLine();
+
+        Console.WriteLine("Enter password:");
+        input_pass = Console.ReadLine();
+            if (input_name == user_name && input_pass == pass_word){
+                Console.WriteLine("Login successful");
+                break;
+            }
+            else{
+                Console.WriteLine($"Login Failed. You have {max - attempts} attemots left");
+            }
+
+       }
+  
+        int stu_id1 = 101; string stu_name1 = "Alice";
+        int stu_id2 = 102; string stu_name2 = "Bob";
+        int stu_id3 = 103; string stu_name3 = "Cathy";
+        Console.WriteLine("------Print information with method");
+        WelcomeMessage(stu_id1, stu_name1);
+        WelcomeMessage(stu_id2, stu_name2);
+        WelcomeMessage(stu_id3, stu_name3);
+    }
+    static void WelcomeMessage(int stu_id, string stu_name){
+    Console.WriteLine($"Welcome to WT Student: {stu_id}! Your name is: {stu_name}");
+
+    int stu_id1 = 101; string stu_name1 = "Alice";
+    WelcomeMessage(stu_id1, stu_name1);
+    PrintWords();
+    }
+    static void WelcomeMessage( int stu_id, string stu_name)
+    {
+        Console.WriteLine($"Welcome to WT student: {stu_id}! Your name is: {stu_name}");
+    }
+    static void PrintWords()
+    {
+        Console.WriteLine("Sample Method without inputs and outputs values");
+
+        //Call method ThreeSum method
+        int returned_sum = ThreeSum(1,2,3);
+        Console.WriteLine($"Returned sum is: {returned_sum}");
+        //Call method ThreeAvg
+        double returned_avg = ThreeAvg(3,3,4);
+        Console.WriteLine($"Returend Average is: {returned_avg}");
+    }
+    static int ThreeSum(int a, int b, int c){
+        int total = a+b+c;
+        return total;
+        Console.WriteLine("End!");
+    }
+    static double ThreeAvg(int a, int b, int c){
+        double avg = (a+b+c)/3.0;
+        return avg;
+    }
+
+    Console.WriteLine("Please input a value");
+    evenodd(Convert.ToInt16(Console.ReadLine()));
+
+    string return_string = return_stringEvenOdd(evenodd);
+    console.WriteLine($"{evenodd} is {return_sting}");
+    }
+    static void evenodd(int num){
+        if(num%2 == 0){
+            Console.WriteLine($"{num} is even");
+        }
+        else{
+            Console.WriteLine($"{num} is odd");
+        }
+    }
+
+    static string return_stringEvenOdd(int num){
+        if(num%2 == 0){
+            Console.WriteLine("even");
+        }
+        else{
+            Console.WriteLine("odd");
+        }
+    }
+
+}
