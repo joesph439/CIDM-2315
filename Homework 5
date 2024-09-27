@@ -1,0 +1,123 @@
+namespace Homework5;
+
+class Program
+{
+   
+    static void Main(string[] args)
+    {
+
+        //Call Q1_method
+        Console.WriteLine("Please input value to a: ");
+        string input_num = Console.ReadLine();
+        int a = Convert.ToInt16(input_num);
+
+        Console.WriteLine("Please input value to b ");
+        string input_num1 = Console.ReadLine();
+        int b = Convert.ToInt16(input_num1);
+
+        int max_value = Question1( a , b);
+        Console.WriteLine($"a = {a}; b = {b}");
+        Console.WriteLine($"The largest number is: {max_value}");
+
+        //Call Q2_method
+        Console.WriteLine("Please input value to c");
+        string input_numb = Console.ReadLine();
+        int c = Convert.ToInt16(input_numb);
+
+        Console.WriteLine("Please input a value to d");
+        string input_number = Console.ReadLine();
+        int d = Convert.ToInt16(input_number);
+
+            //Call Q2_method
+            int max_value1 = Question2( a , b , c , d);
+            Console.WriteLine($"a = {a}; b = {b}; c = {c}; d = {d}");
+            Console.WriteLine($"The largest number is: {max_value1}");
+
+        //Call Q3_method
+        createAccount();
+    }
+    //Q1_method
+    static int Question1(int a, int b){
+        int max_num;
+        if(a > b){
+            max_num = a;
+        }
+        else{
+            max_num = b;
+        }
+        return max_num;
+    }
+    //Q2_method
+    static int Question2(int a, int b, int c, int d){
+        int max1;
+        int max2;
+        int max;
+        if(a > b){
+            max1 = a;
+        }
+        else{
+            max1 = b;
+        }
+        if(c > d){
+            max2 = c;
+        }
+        else{
+            max2 = d;
+        }
+        if(max1 > max2){
+            max = max1;
+        }
+        else{
+            max = max2;
+        }
+        return max;
+    }
+
+    //Q3_method
+    static bool checkAge(int birth_year){
+        int Age1 = 2024 - birth_year;
+        if(Age1 >= 18){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    static void createAccount(){
+        int max5 = 3;
+        string username = "alice";
+        string password = "alice";
+        string input_username;
+        string input_password;
+        string input_password1;
+        string birthyear;
+        for(int attempts = 1; attempts <= max5; attempts++){
+            Console.Write("Enter Your Username:");
+            input_username = Console.ReadLine();
+
+            Console.WriteLine("Enter Your Password:");
+            input_password = Console.ReadLine();
+
+            Console.WriteLine("Enter Your Password Again:");
+            input_password1 = Console.ReadLine();
+
+            Console.WriteLine("Enter your Birthyear:");
+            birthyear = Console.ReadLine();
+            int int_birthyear = Convert.ToInt16(birthyear);
+
+        if(checkAge(int_birthyear)){
+        
+            if(input_username == username && input_password == password && input_password1 == password){
+            Console.WriteLine($"Account is created Successfully");
+            break;
+            }
+            else{
+            Console.WriteLine("Wrong Password");
+            }
+        }
+        else{
+            Console.WriteLine("Could not create an Account; Please try again");
+        }
+        }
+    }
+}
