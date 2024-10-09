@@ -1,0 +1,151 @@
+namespace lecture7;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        //Create professor 1 object
+        Professor p1 = new Professor();
+        p1.name = "Alice";
+        p1.age = 30;
+        p1.PrintInfo();
+
+        //create professor 2 object
+        Professor p2 = new Professor();
+        p2.name = "Bob";
+        p2.age = 40;
+        p2.PrintInfo();
+
+    Building B1 = new Building();
+    B1.name = "Classroom Center";
+    B1.address = "Canyon";
+    B1.num_rooms = 100;
+    B1.PrintBuildingInfo();
+    B1.UpdateName("Study Center");
+    Console.WriteLine($"The new name is: {B1.name}");    
+ 
+    Student s1 =new Student();
+    s1.full_name = "Alice Smith";
+    s1.age = 21;
+    s1.address = "Amarillo";
+    s1.PrintStudentInfo();
+    s1.ChangeAddress("Canyon"); 
+    s1.PrintStudentInfo();
+   
+    Console.WriteLine("------------Public Bank Account----------");
+    PublicBankAccount public1 = new PublicBankAccount();
+    public1.balance = 1000;
+    Console.WriteLine("Public Account balance is" +public1.balance);
+    public1.balance = 500;
+    Console.WriteLine($"New Public Account balance is: {public1.balance}");
+   
+    Console.WriteLine("--------Private Bank Account---------");
+    PrivateBankAccount private1 = new PrivateBankAccount();
+    private1.saveMoney(1000);
+    Console.WriteLine($"Private Account Balance is: {private1.showBalance()}");
+
+    private1.takeMoney(300);
+    Console.WriteLine($"New Private Account Balance is: {private1.showBalance()}");
+
+
+    CreditCard card1 = new CreditCard();
+
+    Console.WriteLine("----Private Variable----");
+    card1.setCardNumber(111111);
+    Console.WriteLine("Card Number:" +card1.getCardNumber());
+
+    Console.WriteLine("----Public Property-----");
+    card1.cardPin = 123;
+    Console.WriteLine("Card pin:" +card1.cardPin);
+    }
+}
+
+class CreditCard{
+    private int cardNumber;
+    public int getCardNumber(){
+        return cardNumber;
+    }
+    public void setCardNumber(int newNumber){
+        cardNumber = newNumber;
+    }
+    public int cardPin{set; get;}
+}
+
+class PrivateBankAccount{
+    private int balance;
+
+    public void saveMoney(int amount){
+        balance = balance + amount;
+    }
+    public void takeMoney(int amount){
+        balance = balance - amount;
+    }
+    public int showBalance(){
+        return balance;
+    }
+}
+
+class PublicBankAccount{
+    public int balance;
+}
+
+class Building{
+    public string name;
+    public string address;
+    public int num_rooms;
+    public void UpdateName(string new_name){
+        name = new_name;
+    }
+    public void PrintBuildingInfo(){
+        Console.WriteLine($"Building name: {name}");
+        Console.WriteLine($"Building address: {address}");
+        Console.WriteLine($"Building number of rooms: {num_rooms}");
+    }
+}
+
+class Student {
+
+    //Attributes: Variables
+    //public is the access modifier to indicate
+    //variables/methods can be accessed from outside class
+
+    public int studentID;
+    public string studentName;
+    public string studentMajor;
+
+
+    // Behaviors: Methods
+    public void RegisterCourse(int CourseID){
+        // to be implemented
+    }
+
+    public void SendEmail(string WTEmail){
+        // add more details
+    }
+
+
+public string full_name;
+public int age;
+public string address;
+
+public void PrintStudentInfo(){
+    Console.WriteLine($"Name: {full_name}");
+    Console.WriteLine($"Age: {age}");
+    Console.WriteLine($"Address: {address}");
+}
+
+public void ChangeAddress(string new_address){
+    address = new_address;
+}
+
+
+}
+
+class Professor{
+    public string name;
+    public int age;
+    public void PrintInfo(){
+        Console.WriteLine($"Professor {name} is {age} years old");
+    }
+}
